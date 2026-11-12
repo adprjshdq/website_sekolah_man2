@@ -1,0 +1,2008 @@
+/*  GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@600;700;800&display=swap');
+
+/* RESET DASAR */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #f8faf9;
+  color: #111827;
+  line-height: 1.65;
+  transition: all 0.25s ease;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #111827;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.adipraja_serif {
+  font-family: 'Cinzel', serif;
+}
+
+p {
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: #16a34a;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+a:hover {
+  color: #c1c42b;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* CONTAINER & LAYOUT UTILITIES */
+.adipraja_container {
+  width: 100%;
+  max-width: 1220px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.adipraja_section {
+  padding: 5rem 0;
+  position: relative;
+}
+
+.adipraja_section_muted {
+  background-color: #f0f4f2;
+}
+
+.adipraja_section_header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3.5rem;
+}
+
+.adipraja_badge_tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #16a34a;
+  padding: 0.35rem 0.9rem;
+  border-radius: 9999px;
+  margin-bottom: 0.75rem;
+}
+
+.adipraja_section_title {
+  font-size: 10;
+  margin-bottom: 0.85rem;
+  font-weight: 700;
+}
+
+.adipraja_section_subtitle {
+  font-size: 1.05rem;
+  color: #4b5563;
+}
+
+/* TOMBOL (BUTTONS)  */
+.adipraja_btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.adipraja_btn_primary {
+  background: #16a34a;
+  color: #ffffff;
+  box-shadow: 0 4px 14px #0c382e40;
+}
+
+.adipraja_btn_primary:hover {
+  background: #165646;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px #95970059;
+}
+
+.adipraja_btn_accent {
+  background: #Ffff00;
+  color: #1b1a1a;
+  box-shadow: 0 4px 14px #c59b274d;
+}
+
+.adipraja_btn_accent:hover {
+  background: #ccc016;
+  color: #1b1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px #c59b2766;
+}
+
+.adipraja_btn_outline {
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.adipraja_btn_outline:hover {
+  background: #ffffff;
+  color: #16a34a;
+  transform: translateY(-2px);
+}
+
+.adipraja_btn_outline_dark {
+  background: transparent;
+  border: 2px solid #e2e8e5;
+  color: #111827;
+}
+
+.adipraja_btn_outline_dark:hover {
+  border-color: #16a34a;
+  color: #16a34a;
+  background: #e8f3ef;
+}
+
+.adipraja_btn_sm {
+  padding: 0.45rem 1.1rem;
+  font-size: 0.85rem;
+}
+
+
+/* TOP BAR */
+.adipraja_topbar {
+  background: #16a34a;
+  color: #ffffffd9;
+  font-size: 0.75rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid #ffffff14;
+}
+
+.adipraja_topbar_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+}
+
+.adipraja_topbar_left,
+.adipraja_topbar_right {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.adipraja_topbar_left {
+  gap: 1.15rem;
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.adipraja_topbar_right {
+  gap: 1rem;
+  flex: 0 0 auto;
+}
+
+.adipraja_topbar_item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #1b1a1a;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.adipraja_topbar_item svg {
+  color: #Ffff00;
+  flex-shrink: 0;
+}
+
+.adipraja_topbar_left .adipraja_topbar_item+.adipraja_topbar_item {
+  padding-left: 1.1rem;
+  border-left: 1px solid #ffffff24;
+}
+
+/* Alamat panjang dipotong rapi dengan elipsis, tetap satu baris */
+.adipraja_topbar_left .adipraja_topbar_item:last-child {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.adipraja_topbar_left .adipraja_topbar_item:last-child span {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.adipraja_topbar_links {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.adipraja_topbar_links a {
+  color: #ffffff;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.adipraja_topbar_links a:hover {
+  color: #c1c42b;
+}
+
+.adipraja_topbar_badge {
+  background: #Ffff00;
+  color: #1b1a1a;
+  padding: 0.28rem 0.75rem;
+  font-weight: 700;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  border-radius: 4px;
+}
+
+.adipraja_topbar_badge:hover {
+  background: #c1c42b;
+  color: #1b1a1a;
+}
+
+
+/* MAIN NAVIGATION HEADER */
+.adipraja_header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fffffff5;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e2e8e5;
+  transition: all 0.25s ease;
+}
+
+.adipraja_header.adipraja_scrolled {
+  box-shadow: 0 4px 12px #0c382e14;
+}
+
+.adipraja_navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.9rem;
+  height: 84px;
+}
+
+/* Logo & Brand */
+.adipraja_brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  padding: 3px;
+  background: #ffffff;
+  border: #ffffff;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 1px 3px #0000000f;
+}
+
+.logo-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.adipraja_logo_crest {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #16a34a, #165646);
+  border: 2px solid #c1c42b;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c1c42b;
+  font-weight: 800;
+  font-size: 1.5rem;
+  box-shadow: 0 1px 3px #0000000f;
+  flex-shrink: 0;
+}
+
+.adipraja_brand_text h1,
+.adipraja_brand_text h2 {
+  font-size: 0.95rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  line-height: 1.15;
+  font-family: sans-serif;
+}
+
+.adipraja_brand_text span {
+  display: block;
+  font-size: 0.58rem;
+  font-weight: 700;
+  color: #050505;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Menu Navigasi  */
+.adipraja_nav_menu {
+  display: flex;
+  align-items: center;
+  gap: 0.95rem;
+  flex: 0 1 auto;
+}
+
+.adipraja_nav_item {
+  position: relative;
+}
+
+.adipraja_nav_link {
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #111827;
+  padding: 0.5rem 0;
+  position: relative;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.adipraja_nav_link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2.5px;
+  transition: width 0.25s ease;
+  border-radius: 9999px;
+}
+
+.adipraja_nav_link:hover,
+.adipraja_nav_link.adipraja_active {
+  color: #16a34a;
+}
+
+.adipraja_nav_link:hover::after,
+.adipraja_nav_link.adipraja_active::after {
+  width: 100%;
+}
+
+.adipraja_header_tools {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-shrink: 0;
+}
+
+.adipraja_header_tools .adipraja_btn {
+  padding: 0.5rem 0.9rem;
+  font-size: 0.74rem;
+  letter-spacing: 0.01em;
+}
+
+.adipraja_mobile_toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #111827;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.4rem;
+}
+
+/* Mobile Drawer Navigasi */
+.adipraja_drawer_overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #0000008c;
+  backdrop-filter: blur(4px);
+  z-index: 1500;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.adipraja_drawer {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 280px;
+  height: 100vh;
+  background: #ffffff;
+  z-index: 1600;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 20px 35px #0c382e29;
+  transition: right 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.adipraja_drawer.adipraja_open {
+  right: 0;
+}
+
+.adipraja_drawer_overlay.adipraja_open {
+  display: block;
+  opacity: 1;
+}
+
+.adipraja_drawer_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid #e2e8e5;
+  margin-bottom: 1.5rem;
+}
+
+.adipraja_drawer .logo-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.adipraja_drawer .adipraja_brand_text h2 {
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+}
+
+.adipraja_drawer .adipraja_brand_text span {
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+}
+
+.adipraja_drawer_links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.adipraja_drawer_link {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #edf2ef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.adipraja_drawer_link.adipraja_active {
+  color: #c1c42b;
+}
+
+
+/* HERO SECTION & CAROUSEL */
+.adipraja_hero {
+  position: relative;
+  background-color: #07241d;
+  color: #ffffff;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.adipraja_hero_slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.adipraja_hero_slide.adipraja_active {
+  opacity: 1;
+}
+
+.adipraja_hero_overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #174222eb 0%, #0c3812bf 55%, #00000066 100%);
+  z-index: 1;
+}
+
+.adipraja_hero_subtitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffffd9;
+  margin-bottom: 40px;
+  letter-spacing: 0.5px;
+}
+
+.adipraja_hero_content {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+  padding: 5rem 0;
+}
+
+.adipraja_hero_title {
+  font-family: sans-serif;
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  font-weight: 650;
+  line-height: 1.15;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+}
+
+.adipraja_hero_title span {
+  color: #c1c42b;
+}
+
+.adipraja_hero_desc {
+  font-size: 1.12rem;
+  color: #ffffffe6;
+  margin-bottom: 2.25rem;
+  line-height: 1.7;
+}
+
+.adipraja_carousel_arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 48px;
+  height: 48px;
+  border-radius: 9999px;
+  background: #ffffff33;
+  border: 1px solid #ffffff4d;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.adipraja_carousel_arrow:hover {
+  background: #c1c42b;
+  border-color: #c1c42b;
+}
+
+.adipraja_carousel_prev {
+  left: 1.5rem;
+}
+
+.adipraja_carousel_next {
+  right: 1.5rem;
+}
+
+.adipraja_carousel_dots {
+  position: absolute;
+  bottom: 1.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.adipraja_dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  background: #ffffff66;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.adipraja_dot.adipraja_active {
+  background: #c1c42b;
+  width: 28px;
+}
+
+/* FLOATING KEY FEATURES BAR */
+.adipraja_features_bar {
+  margin-top: -40px;
+  position: relative;
+  z-index: 10;
+  margin-bottom: 3rem;
+}
+
+.adipraja_features_bar_grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: stretch;
+  width: 100%;
+}
+
+.adipraja_feature_icon {
+  width: 44px;
+  height: 44px;
+  color: #16a34a;
+  margin-bottom: 0.75rem;
+}
+
+.adipraja_feature_title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.25rem;
+}
+
+.adipraja_feature_desc {
+  font-size: 0.78rem;
+  color: #4b5563;
+  line-height: 1.4;
+  margin: 0;
+}
+
+
+/* WELCOME / PROFIL SINGKAT SECTION */
+.adipraja_welcome_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.adipraja_welcome_visual {
+  position: relative;
+}
+
+.adipraja_welcome_img {
+  border-radius: 10px;
+  box-shadow: 0 10px 25px #0c382e1f;
+  border: 4px solid #ffffff;
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  transform: translateY(10px);
+}
+
+.adipraja_welcome_content h4 {
+  color: #16a34a;
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.adipraja_welcome_content h2 {
+  font-family: sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 1.25rem;
+}
+
+.adipraja_stats_row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+  padding: 1.5rem 0;
+  border-top: 1px solid #e2e8e5;
+  border-bottom: 1px solid #e2e8e5;
+}
+
+.adipraja_stat_item {
+  text-align: center;
+}
+
+.adipraja_stat_number {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #16a34a;
+  line-height: 1.1;
+  font-family: 'Cinzel', serif;
+}
+
+.adipraja_stat_title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #4b5563;
+  text-transform: uppercase;
+}
+
+
+/* AKADEMIK / KURIKULUM GRID */
+.adipraja_akademik_layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.adipraja_akademik_grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.adipraja_akademik_card {
+  background: #ffffff;
+  border: 1px solid #e2e8e5;
+  border-radius: 10px;
+  padding: 1.75rem;
+  box-shadow: 0 1px 3px #0000000f;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.adipraja_akademik_card:hover {
+  transform: translateY(-4px);
+  border-color: #16a34a;
+  box-shadow: 0 4px 12px #0c382e14;
+}
+
+.adipraja_card_icon {
+  width: 48px;
+  height: 48px;
+  background: #e8f3ef;
+  border-radius: 6px;
+  color: #16a34a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.adipraja_akademik_title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.adipraja_side_promo {
+  background: #16a34a;
+  color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 25px #0c382e1f;
+}
+
+.adipraja_side_promo_img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.adipraja_side_promo_body {
+  padding: 1.75rem;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.adipraja_side_promo_body h3 {
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.adipraja_side_promo_body p {
+  color: #ffffffd9;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+
+/* FASILITAS GRID */
+.adipraja_fasilitas_grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.adipraja_facility_card {
+  background: #ffffff;
+  border: 1px solid #e2e8e5;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px #0000000f;
+  transition: all 0.25s ease;
+}
+
+.adipraja_facility_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px #0c382e1f;
+}
+
+.adipraja_facility_img_wrap {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+.adipraja_facility_img_wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.adipraja_facility_card:hover .adipraja_facility_img_wrap img {
+  transform: scale(1.08);
+}
+
+.adipraja_facility_body {
+  padding: 1.25rem;
+}
+
+.adipraja_facility_title {
+  font-size: 1.05rem;
+  margin-bottom: 0.35rem;
+}
+
+.adipraja_facility_text {
+  font-size: 0.85rem;
+  color: #4b5563;
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+/* KEHIDUPAN SISWA / GALERI ROW */
+.adipraja_galeri_row {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.adipraja_galeri_thumb {
+  height: 160px;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 1px 3px #0000000f;
+}
+
+.adipraja_galeri_thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.adipraja_galeri_thumb:hover img {
+  transform: scale(1.1);
+}
+
+.adipraja_galeri_overlay {
+  position: absolute;
+  inset: 0;
+  background: #0c382eb3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  font-size: 1.2rem;
+}
+
+.adipraja_galeri_thumb:hover .adipraja_galeri_overlay {
+  opacity: 1;
+}
+
+
+/* PENERIMAAN BANNER CTA */
+.adipraja_penerimaan_banner {
+  background: linear-gradient(135deg, #16a34a 0%, #165646 100%);
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 2.5rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: 0 10px 25px #0c382e1f;
+  border: 1px solid #c59b274d;
+}
+
+.adipraja_penerimaan_banner_left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.adipraja_penerimaan_icon {
+  width: 60px;
+  height: 60px;
+  color: #c1c42b;
+  flex-shrink: 0;
+}
+
+.adipraja_penerimaan_text h3 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+  font-family: 'Cinzel', serif;
+}
+
+.adipraja_penerimaan_text p {
+  color: #ffffffd9;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/*FILTER & LIGHTBOX UNTUK GALERI PAGE */
+.adipraja_filter_btns {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.adipraja_filter_btn {
+  background: #ffffff;
+  border: 1px solid #e2e8e5;
+  color: #111827;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.adipraja_filter_btn:hover,
+.adipraja_filter_btn.adipraja_active {
+  background: #16a34a;
+  border-color: #16a34a;
+  color: #ffffff;
+}
+
+.adipraja_galeri_grid_full {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Lightbox Modal */
+.adipraja_lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #041410f2;
+  z-index: 2500;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  flex-direction: column;
+}
+
+.adipraja_lightbox.adipraja_show {
+  display: flex;
+}
+
+.adipraja_lightbox_img {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px #00000080;
+  border: 3px solid #c1c42b;
+}
+
+.adipraja_lightbox_caption {
+  color: #ffffff;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.adipraja_lightbox_close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: #ffffff26;
+  border: none;
+  color: #ffffff;
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adipraja_lightbox_close:hover {
+  background: #dc2626;
+}
+
+/* FORM INPUTAN KONTAK & PPDB */
+.adipraja_form_card {
+  background: #ffffff;
+  border: 1px solid #e2e8e5;
+  border-radius: 10px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 12px #0c382e14;
+}
+
+.adipraja_form_grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.adipraja_form_group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.adipraja_form_full {
+  grid-column: 1 / -1;
+}
+
+.adipraja_form_label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.adipraja_form_req {
+  color: #dc2626;
+}
+
+.adipraja_form_control {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: #111827;
+  background-color: #f8faf9;
+  border: 1px solid #e2e8e5;
+  border-radius: 6px;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.adipraja_form_control:focus {
+  border-color: #16a34a;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px #0c382e26;
+}
+
+textarea.adipraja_form_control {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Pop-up Modal Sukses Form */
+.adipraja_modal_backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #00000099;
+  backdrop-filter: blur(4px);
+  z-index: 3000;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.adipraja_modal_backdrop.adipraja_show {
+  display: flex;
+}
+
+.adipraja_modal_box {
+  background: #ffffff;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  padding: 2.5rem;
+  text-align: center;
+  box-shadow: 0 20px 35px #0c382e29;
+  border-top: 5px solid #c1c42b;
+}
+
+.adipraja_modal_icon {
+  width: 64px;
+  height: 64px;
+  background: #e8f3ef;
+  color: #16a34a;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 1.25rem;
+}
+
+/* FAQ ACCORDION */
+.adipraja_faq_list {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.adipraja_faq_item {
+  background: #ffffff;
+  border: 1px solid #e2e8e5;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.adipraja_faq_btn {
+  width: 100%;
+  padding: 1.25rem 1.5rem;
+  background: none;
+  border: none;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.adipraja_faq_icon {
+  font-size: 1.25rem;
+  color: #c1c42b;
+  transition: transform 0.3s ease;
+}
+
+.adipraja_faq_item.adipraja_active .adipraja_faq_icon {
+  transform: rotate(45deg);
+}
+
+.adipraja_faq_content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 1.5rem;
+}
+
+.adipraja_faq_item.adipraja_active .adipraja_faq_content {
+  padding-bottom: 1.25rem;
+}
+
+/* FOOTER */
+.adipraja_footer {
+  background: #16a34a;
+  color: #cbd5e1;
+  padding-top: 4.5rem;
+  margin-top: auto;
+  border-top: 1px solid #ffffff14;
+}
+
+.adipraja_footer_grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.2fr;
+  gap: 40px;
+  padding-bottom: 40px;
+  min-width: 0;
+}
+
+.adipraja_footer_brand h3 {
+  color: #ffffff;
+  font-size: 1.15rem;
+  margin-bottom: 0.25rem;
+}
+
+.adipraja_footer_tagline {
+  font-size: 0.8rem;
+  color: #cddc39;
+}
+
+.adipraja_footer_brand p {
+  color: #ffffff;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+.adipraja_footer_title {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+/* Garis strip kuning di bawah judul footer */
+.adipraja_footer_title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom:0;
+  width: 30px;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+
+.adipraja_footer_links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.adipraja_footer_links li {
+  margin-bottom: 0.65rem;
+}
+
+.adipraja_footer_links a {
+  color: #ffffff;
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.adipraja_footer_links a:hover {
+  color: #Ffff00;
+  padding-left: 4px;
+}
+
+.adipraja_footer_bottom {
+  border-top: 1px solid #ffffff;
+  padding-bottom: 70px;
+  font-size: 0.82rem;
+  color: #ffffff;
+  padding: 40px;
+}
+
+.adipraja_footer_bottom_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/*KELAS BANTU (UTILITY) - PENGGANTI STYLE INLINE */
+
+/* Tombol X penutup menu mobile (drawer) */
+.adipraja_drawer_close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #111827;
+}
+
+/* Badge/label kecil di atas judul hero (latar transparan) */
+.adipraja_badge_hero {
+  color: #Ffff00;
+}
+
+/* Teks kecil emas di bagian bawah footer (nama madrasah) */
+.adipraja_footer_tagline {
+  font-size: 0.7rem;
+  color: #ffffff;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+
+/* Judul kecil di dalam kartu program / ekstrakurikuler */
+.adipraja_program_title {
+  color: #0c382e;
+  margin-bottom: 0.4rem;
+}
+
+/* Pesan di dalam modal sukses form */
+.adipraja_modal_message {
+  margin-bottom: 1.5rem;
+  color: #4b5563;
+}
+
+/* Nomor urut misi (01, 02, dst.) */
+.adipraja_mission_number {
+  color: #16a34a;
+  font-weight: 800;
+}
+
+/* Label tebal di kartu kontak (Alamat, Telepon, Email, Jam) */
+.adipraja_contact_label {
+  display: block;
+  font-size: 1.05rem;
+  color: #0c382e;
+}
+
+/* Ikon emoji beasiswa prestasi */
+.adipraja_scholarship_icon {
+  font-size: 1.5rem;
+  color: #c1c42b;
+}
+
+/* Keterangan periode pada kartu gelombang PPDB */
+.adipraja_phase_period {
+  font-size: 0.88rem;
+  color: #4b5563;
+  margin-bottom: 0.3rem;
+}
+
+/* Daftar poin di dalam kartu program */
+.adipraja_card_list {
+  font-size: 0.85rem;
+  color: #4b5563;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+/* Bayangan sedang untuk kartu (dipakai di halaman akademik) */
+.adipraja_card_shadow {
+  box-shadow: 0 4px 12px #0c382e14;
+}
+
+/* Kalimat pembuka emas di section sambutan.
+   Ditulis lengkap agar mengalahkan aturan .adipraja_side_promo_body p */
+.adipraja_side_promo_body p.adipraja_welcome_kicker {
+  color: #c1c42b;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+/* Judul bagian di dalam formulir PPDB */
+.adipraja_form_section_title {
+  color: #0c382e;
+  border-bottom: 2px solid #edf2ef;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Judul panel/kotak informasi (gelombang, beasiswa) */
+.adipraja_panel_title {
+  font-size: 1.4rem;
+  color: #0c382e;
+  margin-bottom: 1.25rem;
+}
+
+/* Judul kecil berwarna gelap */
+.adipraja_note_heading {
+  font-size: 0.8rem;
+  color: #0c382e;
+  font-weight: 700;
+}
+
+/* Jabatan kepala sekolah di halaman profil */
+.adipraja_principal_role {
+  font-size: 0.85rem;
+  color: #16a34a;
+  font-weight: 700;
+}
+
+/* Label checkbox persetujuan di form PPDB */
+.adipraja_confirm_label {
+  font-size: 0.88rem;
+  color: #4b5563;
+  cursor: pointer;
+}
+
+/* Garis atas kartu dengan warna hijau utama */
+.adipraja_card_top_primary {
+  border-top: 4px solid #16a34a;
+}
+
+/* Label kecil (kicker) di dalam kartu, versi gelap */
+.adipraja_card_kicker_heading {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #Ffff00;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+/* Label kecil (kicker) di dalam kartu, versi emas */
+.adipraja_card_kicker_accent {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #16a34a;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+/* Kartu visi (isi rata tengah vertikal + garis atas emas) */
+.adipraja_vision_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: 4px solid #Ffff00;
+}
+
+/* Judul pernyataan visi */
+.adipraja_vision_title {
+  font-size: 1.6rem;
+  color: #0c382e;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+/* Kartu periode gelombang PPDB */
+.adipraja_phase_card {
+  padding: 1rem;
+  background: #f8faf9;
+  border-radius: 6px;
+}
+
+/* Varian garis kiri kartu periode PPDB */
+.adipraja_phase_card_accent {
+  border-left: 4px solid #c1c42b;
+}
+
+.adipraja_phase_card_primary {
+  border-left: 4px solid #16a34a;
+}
+
+.adipraja_phase_card_muted {
+  border-left: 4px solid #64748b;
+}
+
+/* Judul kecil form di halaman kontak */
+.adipraja_form_title {
+  font-size: 1.4rem;
+  color: #0c382e;
+  margin-bottom: 0.4rem;
+}
+
+/* Bingkai peta Google Maps di halaman kontak */
+.adipraja_map_wrap {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px #0c382e1f;
+  border: 4px solid #ffffff;
+  margin-bottom: 4rem;
+}
+
+/* Catatan kecil pada kartu gelombang PPDB */
+.adipraja_phase_note {
+  font-size: 0.8rem;
+  color: #4b5563;
+  font-weight: 700;
+}
+
+/* Catatan kecil khusus status "tersedia" (hijau) */
+.adipraja_phase_note_success {
+  font-size: 0.8rem;
+  color: #16a34a;
+  font-weight: 700;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 1200px) {
+  .adipraja_topbar_links {
+    display: none;
+  }
+
+  .adipraja_nav_menu {
+    display: none;
+  }
+
+  .adipraja_mobile_toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 1080px) {
+  .adipraja_features_bar_grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .adipraja_feature_item:nth-child(3) {
+    border-right: none;
+  }
+
+  .adipraja_fasilitas_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .adipraja_galeri_row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .adipraja_footer_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 868px) {
+  .adipraja_topbar {
+    display: none;
+  }
+
+  .adipraja_navbar {
+    height: 74px;
+    gap: 0.75rem;
+  }
+
+  .logo-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .adipraja_brand {
+    gap: 0.6rem;
+  }
+
+  .adipraja_navbar .adipraja_brand_text h1,
+  .adipraja_navbar .adipraja_brand_text h2 {
+    font-size: 0.9rem;
+  }
+
+  .adipraja_navbar .adipraja_brand_text span {
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+  }
+
+  .adipraja_welcome_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .adipraja_akademik_layout {
+    grid-template-columns: 1fr;
+  }
+
+  .adipraja_features_bar_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .adipraja_penerimaan_banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .adipraja_penerimaan_banner_left {
+    flex-direction: column;
+  }
+
+  .adipraja_form_grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 580px) {
+  .adipraja_header_tools .adipraja_btn {
+    display: none;
+  }
+
+  .adipraja_navbar {
+    height: 68px;
+    gap: 0.5rem;
+  }
+
+  .logo-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .adipraja_brand {
+    gap: 0.5rem;
+  }
+
+  .adipraja_navbar .adipraja_brand_text h1,
+  .adipraja_navbar .adipraja_brand_text h2 {
+    font-size: 0.72rem;
+    letter-spacing: 0.02em;
+  }
+
+  .adipraja_navbar .adipraja_brand_text span {
+    display: none;
+  }
+
+  .adipraja_header_tools {
+    gap: 0.5rem;
+  }
+
+  .adipraja_mobile_toggle {
+    padding: 0.25rem;
+  }
+
+  .adipraja_features_bar_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .adipraja_feature_item {
+    border-right: none;
+    border-bottom: 1px solid #e2e8e5;
+  }
+
+  .adipraja_stats_row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .adipraja_fasilitas_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .adipraja_galeri_row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .adipraja_footer_grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 360px) {
+  .adipraja_navbar .adipraja_brand_text {
+    display: none;
+  }
+}
+
+/* ANIMASI FILTER GALERI */
+@keyframes adiprajaFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.adipraja_lightbox_trigger {
+  cursor: pointer;
+}
+
+/* GRID KOLOM RESPONSIF */
+/* Dipakai untuk menggantikan grid-template-columns inline agar media query tetap bekerja */
+.adipraja_cols_3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.adipraja_cols_4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.adipraja_cols_5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.adipraja_footer_grid>div {
+  min-width: 0;
+}
+
+@media (max-width: 1080px) {
+  .adipraja_cols_5 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .adipraja_cols_4,
+  .adipraja_cols_3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 868px) {
+
+  .adipraja_cols_5,
+  .adipraja_cols_4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .adipraja_cols_3,
+  .adipraja_akademik_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .adipraja_carousel_arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 580px) {
+
+  .adipraja_cols_5,
+  .adipraja_cols_4,
+  .adipraja_cols_3,
+  .adipraja_akademik_grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* HALAMAN KARIR & ALUMNI */
+/* CSS khusus untuk karir.html dan alumni.html. */
+
+/* --- Grid kartu lowongan kerja (halaman karir) --- */
+.adipraja_job_grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+/* Kartu satu posisi/lowongan */
+.adipraja_job_card {
+  background: #ffffff;
+  border: 1px solid #e2e8e5;
+  border-radius: 10px;
+  padding: 1.75rem;
+  box-shadow: 0 1px 3px #0000000f;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.adipraja_job_card:hover {
+  transform: translateY(-5px);
+  border-color: #16a34a;
+  box-shadow: 0 10px 25px #0c382e1f;
+}
+
+/* Label jenis formasi (Tenaga Pendidik / Kependidikan) */
+.adipraja_job_badge {
+  align-self: flex-start;
+  display: inline-block;
+  background: #e8f3ef;
+  color: #165646;
+  border: 1px solid #cfe6dc;
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+
+/* Judul posisi */
+.adipraja_job_title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0c382e;
+  margin-bottom: 0.35rem;
+  line-height: 1.35;
+}
+
+/* Keterangan singkat di bawah judul posisi */
+.adipraja_job_meta {
+  font-size: 0.8rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+/* Daftar kualifikasi pada kartu lowongan */
+.adipraja_job_list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin: 0 0 1.5rem;
+  padding: 0;
+}
+
+.adipraja_job_list li {
+  position: relative;
+  padding-left: 1.15rem;
+  font-size: 0.85rem;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+/* Tanda centang hijau pada daftar kualifikasi */
+.adipraja_job_list li::before {
+  content: '\2714';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #16a34a;
+  font-size: 0.8rem;
+}
+
+/* Tombol di bagian bawah kartu lowongan */
+.adipraja_job_footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid #edf2ef;
+}
+
+/* Link "Lamar posisi ini" */
+.adipraja_job_link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #16a34a;
+}
+
+.adipraja_job_link:hover {
+  color: #165646;
+}
+
+/* --- Kotak ajakan khusus halaman alumni --- */
+.adipraja_alumni_note {
+  background: #ffffff;
+  border: 1px solid #e2e8e5;
+  border-left: 4px solid #c1c42b;
+  border-radius: 10px;
+  padding: 1.5rem 1.75rem;
+  box-shadow: 0 1px 3px #0000000f;
+}
+
+.adipraja_alumni_note h4 {
+  color: #0c382e;
+  margin-bottom: 0.4rem;
+}
+
+/* Responsif: kartu lowongan menjadi 2 kolom lalu 1 kolom */
+@media (max-width: 1080px) {
+  .adipraja_job_grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 580px) {
+  .adipraja_job_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .adipraja_job_card {
+    padding: 1.4rem;
+  }
+}
+
+/* CSS fitur utama bar */
+
+/* Banner gambar */
+.adipraja_hero {
+  width: 100%;
+  height: 250px;
+  background-image: url('gambar-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Konten banner */
+.adipraja_hero-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background: rgba(0, 40, 30, 0.75);
+}
+
+/* Container menu */
+.adipraja_menu-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Masing-masing menu */
+
+.adipraja_menu-item {
+  min-height: 85px;
+  padding: 20px 25px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  align-content: center;
+  text-decoration: none;
+  border-right: 1px solid #e5e7eb;
+  transition: background 0.3s ease;
+}
+
+/* Kategori */
+.adipraja_menu-category {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 12px;
+  color: #16a34a;
+  margin-bottom: 6px;
+}
+
+/* Judul */
+.adipraja_menu-item h3 {
+  grid-column: 1;
+  grid-row: 2;
+  font-size: 16px;
+  font-weight: 600;
+  color: #172033;
+  margin: 0;
+}
+
+/* Panah */
+.adipraja_arrow {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  align-self: center;
+  font-size: 16px;
+  color: #16a34a;
+}
+
+/* Hover */
+.adipraja_menu-item:hover {
+  background: #Ffff00;
+}
+
+/* Responsive HP */
+@media (max-width: 768px) {
+  .adipraja_menu-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .adipraja_menu-container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1281,7 +1281,7 @@ textarea.adipraja_form_control {
   content: "";
   position: absolute;
   left: 0;
-  bottom:0;
+  bottom: 0;
   width: 30px;
   height: 3px;
   background-color: #ffffff;
@@ -1773,9 +1773,6 @@ textarea.adipraja_form_control {
 }
 
 /* HALAMAN KARIR & ALUMNI */
-/* CSS khusus untuk karir.html dan alumni.html. */
-
-/* --- Grid kartu lowongan kerja (halaman karir) --- */
 .adipraja_job_grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1914,10 +1911,6 @@ textarea.adipraja_form_control {
 }
 
 /* CSS fitur utama bar */
-
-/* CATATAN: .adipraja_hero sudah diatur di bagian "HERO / BANNER" di atas.
-   Jangan menimpa height atau background-image di sini, karena gambar slide
-   (.adipraja_hero_slide) sudah menutupi seluruh area hero. */
 
 /* Container menu */
 .adipraja_menu-container {

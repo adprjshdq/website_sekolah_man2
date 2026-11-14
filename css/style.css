@@ -1915,28 +1915,9 @@ textarea.adipraja_form_control {
 
 /* CSS fitur utama bar */
 
-/* Banner gambar */
-.adipraja_hero {
-  width: 100%;
-  height: 250px;
-  background-image: url('gambar-banner.jpg');
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-/* Konten banner */
-.adipraja_hero-content {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 20px 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  background: rgba(0, 40, 30, 0.75);
-}
+/* CATATAN: .adipraja_hero sudah diatur di bagian "HERO / BANNER" di atas.
+   Jangan menimpa height atau background-image di sini, karena gambar slide
+   (.adipraja_hero_slide) sudah menutupi seluruh area hero. */
 
 /* Container menu */
 .adipraja_menu-container {

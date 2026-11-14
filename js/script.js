@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-  /* 1. Mobile Drawer Navigation */
+/* 1. Mobile Drawer Navigation */
 
 function initMobileDrawer() {
   const toggleBtn = document.querySelector('.adipraja_mobile_toggle');
@@ -39,7 +39,7 @@ function initMobileDrawer() {
 }
 
 
-  /* 2. Header Sticky Shadow saat Di-Scroll */
+/* 2. Header Sticky Shadow saat Di-Scroll */
 
 function initHeaderScroll() {
   const header = document.querySelector('.adipraja_header');
@@ -55,7 +55,7 @@ function initHeaderScroll() {
 }
 
 
-   /* 3. Hero Carousel / Image Slider */
+/* 3. Hero Carousel / Image Slider */
 function initHeroCarousel() {
   const slides = document.querySelectorAll('.adipraja_hero_slide');
   const dots = document.querySelectorAll('.adipraja_dot');
@@ -133,7 +133,7 @@ function initHeroCarousel() {
 }
 
 
-   /* 4. Running Counter Numbers (Intersection Observer) */
+/* 4. Running Counter Numbers (Intersection Observer) */
 function initNumberCounters() {
   const statNumbers = document.querySelectorAll('.adipraja_stat_number[data-target]');
   if (statNumbers.length === 0) return;
@@ -149,7 +149,7 @@ function initNumberCounters() {
         const target = parseInt(el.getAttribute('data-target'), 10);
         const prefix = el.getAttribute('data-prefix') || '';
         const suffix = el.getAttribute('data-suffix') || '';
-        
+
         animateCounter(el, target, prefix, suffix);
         observerInstance.unobserve(el);
       }
@@ -178,7 +178,7 @@ function animateCounter(element, target, prefix, suffix) {
 }
 
 
-   /* 5. Gallery Category Filter */
+/* 5. Gallery Category Filter */
 function initGalleryFilter() {
   const filterBtns = document.querySelectorAll('.adipraja_filter_btn');
   const items = document.querySelectorAll('.adipraja_galeri_item');
@@ -206,7 +206,7 @@ function initGalleryFilter() {
 }
 
 
-   /* 6. Lightbox Modal Preview Foto */
+/* 6. Lightbox Modal Preview Foto */
 function initLightbox() {
   const lightboxTriggers = document.querySelectorAll('.adipraja_lightbox_trigger');
   const lightbox = document.getElementById('adipraja_lightbox_modal');
@@ -247,7 +247,7 @@ function initLightbox() {
   });
 }
 
-   /* 7. Accordion FAQ */
+/* 7. Accordion FAQ */
 function initFaqAccordion() {
   const faqButtons = document.querySelectorAll('.adipraja_faq_btn');
 
@@ -279,7 +279,7 @@ function initFaqAccordion() {
 }
 
 
-   /* 8. Form Validasi & Pengiriman ke Email (Web3Forms) */
+/* 8. Form Validasi & Pengiriman ke Email (Web3Forms) */
 const WEB3FORMS_ACCESS_KEY = '59555177-b5fe-40d5-be2f-9d932bed7b5b';
 const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 
@@ -400,7 +400,7 @@ function initFormValidation() {
       if (botcheck && botcheck.checked) return; // honeypot: hentikan bot tanpa kirim
 
       const nama = adiprajaGetFieldValue('adipraja_input_name');
-      const email = adiprajaGetFieldValue('adipraja_input_contact_email');
+      const email = adiprajaGetFieldValue('adipraja_input_kontak_email');
       const phone = adiprajaGetFieldValue('adipraja_input_phone');
       const topik = adiprajaGetFieldValue('adipraja_input_subject');
       const pesan = adiprajaGetFieldValue('adipraja_input_message');
@@ -479,68 +479,27 @@ function initFormValidation() {
     });
   }
 
-  // Newsletter -> email admin
-  if (emailsubscriptionForm) {
-    emailsubscriptionForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
+  /* 9. Highlighting Active Menu Navigasi */
+  function highlightActiveMenu() {
+    const normalizePath = (value) => {
+      if (!value) return '';
+      return decodeURIComponent(value)
+        .split('#')[0]
+        .split('?')[0]
+        .replace(/^\.\//, '')
+        .split('/')
+        .pop();
+    };
 
-      const emailInput = emailsubscriptionForm.querySelector('input[type="email"]');
-      const email = emailInput ? emailInput.value.trim() : '';
-      if (!email) {
-        if (emailInput) emailInput.focus();
-        return;
-      }
+    const currentPath = normalizePath(window.location.pathname) || 'beranda.html';
+    const navLinks = document.querySelectorAll('.adipraja_nav_link, .adipraja_drawer_link');
 
-      const submitBtn = emailsubscriptionForm.querySelector('button[type="submit"]');
-      if (submitBtn) {
-        submitBtn.disabled = true;
-        submitBtn.style.opacity = '0.6';
-      }
-
-      try {
-        await adiprajaSendToEmail({
-          subject: '[Website] Langganan Newsletter',
-          from_name: 'Newsletter Website MAN 2',
-          replyto: email,
-          'Email Pelanggan': email,
-          'Waktu Kirim': new Date().toLocaleString('id-ID', { dateStyle: 'full', timeStyle: 'short' })
-        });
-
-        emailsubscriptionForm.reset();
-        showSuccess('Berhasil Berlangganan!', 'Terima kasih telah berlangganan newsletter dan buletin berkala MAN 2 Kota Tasikmalaya.');
-      } catch (err) {
-        showSendError(err);
-      } finally {
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.style.opacity = '';
-        }
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      if (!href || href.startsWith('#')) return;
+      if (normalizePath(href) === currentPath) {
+        link.classList.add('adipraja_active');
       }
     });
   }
-}
-
-
-   /* 9. Highlighting Active Menu Navigasi */
-function highlightActiveMenu() {
-  const normalizePath = (value) => {
-    if (!value) return '';
-    return decodeURIComponent(value)
-      .split('#')[0]
-      .split('?')[0]
-      .replace(/^\.\//, '')
-      .split('/')
-      .pop();
-  };
-
-  const currentPath = normalizePath(window.location.pathname) || 'beranda.html';
-  const navLinks = document.querySelectorAll('.adipraja_nav_link, .adipraja_drawer_link');
-
-  navLinks.forEach(link => {
-    const href = link.getAttribute('href');
-    if (!href || href.startsWith('#')) return;
-    if (normalizePath(href) === currentPath) {
-      link.classList.add('adipraja_active');
-    }
-  });
 }

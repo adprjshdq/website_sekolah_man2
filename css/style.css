@@ -137,16 +137,16 @@ ol {
 }
 
 .adipraja_btn_primary {
-  background: #16a34a;
-  color: #ffffff;
-  box-shadow: 0 4px 14px #0c382e40;
+  background: #Ffff00;
+  color: #1b1a1a;
+  box-shadow: 0 4px 14px #c59b274d;
 }
 
 .adipraja_btn_primary:hover {
-  background: #165646;
-  color: #ffffff;
+  background: #Ffff00;
+  color: #1b1a1a;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px #95970059;
+  box-shadow: 0 6px 18px #c59b274d;
 }
 
 .adipraja_btn_accent {

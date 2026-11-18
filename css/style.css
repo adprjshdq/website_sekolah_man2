@@ -294,7 +294,7 @@ ol {
 }
 
 
-/* MAIN NAVIGATION HEADER */
+/* main navigasi header */
 .adipraja_header {
   position: sticky;
   top: 0;
@@ -535,7 +535,7 @@ ol {
 }
 
 
-/* HERO SECTION & CAROUSEL */
+/* Hero section & caraousel */
 .adipraja_hero {
   position: relative;
   background-color: #07241d;
@@ -656,7 +656,7 @@ ol {
   width: 28px;
 }
 
-/* FLOATING KEY FEATURES BAR */
+/* Floating key fitur bar */
 .adipraja_features_bar {
   margin-top: -40px;
   position: relative;
@@ -693,7 +693,7 @@ ol {
 }
 
 
-/* WELCOME / PROFIL SINGKAT SECTION */
+/* Welcome / profil singkat section */
 .adipraja_welcome_grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -759,7 +759,7 @@ ol {
 }
 
 
-/* AKADEMIK / KURIKULUM GRID */
+/* Akademik / Kurikulum grid */
 .adipraja_akademik_layout {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -846,7 +846,7 @@ ol {
 }
 
 
-/* FASILITAS GRID */
+/* Fasilitas grid */
 .adipraja_fasilitas_grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -902,7 +902,7 @@ ol {
 }
 
 
-/* KEHIDUPAN SISWA / GALERI ROW */
+/* Kehidupan siswa / Galeri row */
 .adipraja_galeri_row {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -948,7 +948,7 @@ ol {
 }
 
 
-/* PENERIMAAN BANNER CTA */
+/* Penerimaan banner cta */
 .adipraja_penerimaan_banner {
   background: linear-gradient(135deg, #16a34a 0%, #165646 100%);
   color: #ffffff;
@@ -988,7 +988,7 @@ ol {
   font-size: 0.95rem;
 }
 
-/*FILTER & LIGHTBOX UNTUK GALERI PAGE */
+/*Filter & Lightbox untuk galeri page */
 .adipraja_filter_btns {
   display: flex;
   justify-content: center;
@@ -1077,7 +1077,7 @@ ol {
   background: #dc2626;
 }
 
-/* FORM INPUTAN KONTAK & PPDB */
+/* Form inputan kontak & PPDB */
 .adipraja_form_card {
   background: #ffffff;
   border: 1px solid #e2e8e5;
@@ -1177,7 +1177,7 @@ textarea.adipraja_form_control {
   margin: 0 auto 1.25rem;
 }
 
-/* FAQ ACCORDION */
+/* Faq */
 .adipraja_faq_list {
   max-width: 820px;
   margin: 0 auto;
@@ -1230,7 +1230,7 @@ textarea.adipraja_form_control {
   padding-bottom: 1.25rem;
 }
 
-/* FOOTER */
+/* Footer */
 .adipraja_footer {
   background: #16a34a;
   color: #cbd5e1;
@@ -1402,8 +1402,7 @@ textarea.adipraja_form_control {
   box-shadow: 0 4px 12px #0c382e14;
 }
 
-/* Kalimat pembuka emas di section sambutan.
-   Ditulis lengkap agar mengalahkan aturan .adipraja_side_promo_body p */
+/* Kalimat pembuka emas di section sambutan. Ditulis lengkap agar mengalahkan aturan .adipraja_side_promo_body p */
 .adipraja_side_promo_body p.adipraja_welcome_kicker {
   color: #c1c42b;
   font-weight: 700;
@@ -1537,7 +1536,7 @@ textarea.adipraja_form_control {
   font-weight: 700;
 }
 
-/* RESPONSIVE BREAKPOINTS */
+/* Responsive mobile */
 @media (max-width: 1200px) {
   .adipraja_topbar_links {
     display: none;
@@ -1699,7 +1698,7 @@ textarea.adipraja_form_control {
   }
 }
 
-/* ANIMASI FILTER GALERI */
+/* Animasi filter galeri */
 @keyframes adiprajaFadeIn {
   from {
     opacity: 0;
@@ -1716,7 +1715,7 @@ textarea.adipraja_form_control {
   cursor: pointer;
 }
 
-/* GRID KOLOM RESPONSIF */
+/* Grid kolom responsive*/
 /* Dipakai untuk menggantikan grid-template-columns inline agar media query tetap bekerja */
 .adipraja_cols_3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1772,7 +1771,7 @@ textarea.adipraja_form_control {
   }
 }
 
-/* HALAMAN KARIR & ALUMNI */
+/* Halaman karir & Alumni */
 .adipraja_job_grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

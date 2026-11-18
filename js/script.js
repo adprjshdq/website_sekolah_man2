@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-/* 1. Mobile Drawer Navigation */
+/* Mobile Drawer Navigation */
 
 function initMobileDrawer() {
   const toggleBtn = document.querySelector('.adipraja_mobile_toggle');
@@ -39,7 +39,7 @@ function initMobileDrawer() {
 }
 
 
-/* 2. Header Sticky Shadow saat Di-Scroll */
+/* Header Sticky Shadow saat Di-Scroll */
 
 function initHeaderScroll() {
   const header = document.querySelector('.adipraja_header');
@@ -55,7 +55,7 @@ function initHeaderScroll() {
 }
 
 
-/* 3. Hero Carousel / Image Slider */
+/* Hero Carousel / Image Slider */
 function initHeroCarousel() {
   const slides = document.querySelectorAll('.adipraja_hero_slide');
   const dots = document.querySelectorAll('.adipraja_dot');
@@ -133,7 +133,7 @@ function initHeroCarousel() {
 }
 
 
-/* 4. Running Counter Numbers (Intersection Observer) */
+/* Running Counter Numbers (Intersection Observer) */
 function initNumberCounters() {
   const statNumbers = document.querySelectorAll('.adipraja_stat_number[data-target]');
   if (statNumbers.length === 0) return;
@@ -178,7 +178,7 @@ function animateCounter(element, target, prefix, suffix) {
 }
 
 
-/* 5. Gallery Category Filter */
+/* Gallery Category Filter */
 function initGalleryFilter() {
   const filterBtns = document.querySelectorAll('.adipraja_filter_btn');
   const items = document.querySelectorAll('.adipraja_galeri_item');
@@ -206,7 +206,7 @@ function initGalleryFilter() {
 }
 
 
-/* 6. Lightbox Modal Preview Foto */
+/* Lightbox Modal Preview Foto */
 function initLightbox() {
   const lightboxTriggers = document.querySelectorAll('.adipraja_lightbox_trigger');
   const lightbox = document.getElementById('adipraja_lightbox_modal');
@@ -279,7 +279,7 @@ function initFaqAccordion() {
 }
 
 
-/* 8. Form Validasi & Pengiriman ke Email (Web3Forms) */
+/* Form Validasi & Pengiriman ke Email (Web3Forms) */
 const WEB3FORMS_ACCESS_KEY = '59555177-b5fe-40d5-be2f-9d932bed7b5b';
 const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 
@@ -479,7 +479,7 @@ function initFormValidation() {
     });
   }
 
-  /* 9. Highlighting Active Menu Navigasi */
+  /* Highlighting Active Menu Navigasi */
   function highlightActiveMenu() {
     const normalizePath = (value) => {
       if (!value) return '';
